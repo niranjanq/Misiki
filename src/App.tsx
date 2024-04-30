@@ -9,11 +9,11 @@ import { GoArrowRight } from "react-icons/go";
 import { TbWorld } from "react-icons/tb";
 function App() {
   const [modal, setModal] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setModal(true);
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setModal(true);
+    }, 2000);
+  }, []);
   return modal ? (
     <Modal setModal={setModal} />
   ) : (
@@ -64,6 +64,7 @@ function App() {
         </div>
         <div className="pagination flex gap-2 text-sm text-black/40">
           {Array.from({ length: 11 }, (_, index) => index).map((e, i) => {
+            console.log(e)
             return (
               <div
                 className="flex items-center justify-center p-2 px-3.5 rounded-full"

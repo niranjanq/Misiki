@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { menu } from "../data/constants";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";

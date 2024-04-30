@@ -1,13 +1,13 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
-const Modal = ({setModal}:{setModal:any}) => {
+const Modal = ({setModal}:{setModal:React.Dispatch<React.SetStateAction<boolean>>}) => {
   return (
-      <div className="modal w-full h-full flex items-center justify-center sticky bg-black/30 w-screen h-screen">
+      <div className="modal flex items-center justify-center sticky bg-black/30 w-screen h-screen">
         <div className="box w-[clamp(250px,500px,90vw)] h-[90vh] bg-white flex flex-col gap-4 p-8 items-center text-black overflow-y-scroll no-scrollbar relative">
           <div
             className="absolute top-2 right-2 text-xl float-right p-2"
-            onClick={(e) => setModal(false)}
+            onClick={() => setModal(false)}
           >
             <IoClose />
           </div>
@@ -57,4 +57,4 @@ const Modal = ({setModal}:{setModal:any}) => {
     )
 };
 
-export default Modal;
+export default Modal;
